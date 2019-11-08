@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
 import Card from '../Card/Card';
+import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
@@ -8,12 +8,12 @@ const Container = styled.div`
     padding: 20px;
 `
 
-const FollowerCards = (props) => {    
+const UserCard = (props) => {
     return (
         <Container>
-            <Card />
+            <Card avatar={props.avatar}/>
         </Container>
     )
 }
 
-export default FollowerCards;
+export default UserCard;

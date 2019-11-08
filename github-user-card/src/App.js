@@ -8,18 +8,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      follows: []
     }
-    //bindings below
+    //bindings
 
   }
-  //do stuff below
+
   componentDidMount() {
     axios.get('https://api.github.com/users/abtorres')
       .then(response => {
-        // console.log(response)
         this.setState({data: response.data})
-        console.log(this.state.data)
       })
       .then(error => console.log(error))
   }

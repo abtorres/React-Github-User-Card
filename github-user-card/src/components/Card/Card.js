@@ -5,17 +5,16 @@ const Container = styled.div`
     width: 50%;
     
 `
-
 const Information = styled.div`
     background-color: green;
     height: 200px;
 `
-
-const UserImage = styled.img`
+const UserImage = styled.div`
     background-color: blue;
     height: 200px;
-    width: 50%;
+    width: 40%;
     display: flex;
+    background-image: url(${props => props.avatar});
 `
 
 const UserInfo = styled.div`
@@ -26,7 +25,7 @@ const Card = (props) => {
     return (
         <Container>
             <Information>
-                <UserImage />
+                <UserImage avatar={props.avatar}/>
                 <UserInfo>
 
                 </UserInfo>
