@@ -9,7 +9,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       data: [],
-      follows: []
     }
     //bindings
 
@@ -20,7 +19,7 @@ class App extends React.Component {
       .then(response => {
         this.setState({data: response.data})
       })
-      .then(error => console.log(error))
+      .catch(error => console.log(error))
   }
 
   render() {

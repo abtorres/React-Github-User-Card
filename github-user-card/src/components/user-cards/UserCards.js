@@ -7,14 +7,14 @@ const Cards = styled.div`
     background-color: yellow;
     width: 100%;
     display: flex;
+    flex-direction: column;
 `
 
 const UserCards = (props) => {
-    console.log(props.data)
     return (
         <Cards>
-            <UserCard avatar={props.data.avatar_url}/>
-            <FollowerCards followers={props.data.followers_url}/>
+            <UserCard avatar={props.data.avatar_url} name={props.data.name} userName={props.data.login} publicRepos={props.data.public_repos} />
+            <FollowerCards following={props.data.following_url} />
         </Cards>
     )
 }
